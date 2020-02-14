@@ -7,6 +7,36 @@ import Fade from 'react-reveal/Fade';
 export default class extends Component{
     constructor(props){
         super(props);
+        this.state = {
+          name:null,
+          email:null,
+          address:null,
+          phone:null
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.onChange = this.onChange.bind(this);
+    }
+    onChange(event){
+      this.setState({
+        [event.target.name] : event.target.value
+      })
+    }
+    async handleSubmit(event){
+      event.preventDefault();
+      const {email,name,phone,address} = this.state;
+      console.log("Email", email);
+      console.log("name", name);
+      console.log("address", address);
+      console.log("phone", phone);
+      const form = await axios.post('/api/form',{
+        email,
+        name,
+        address,
+        phone
+      }).catch(err => {
+        console.log(err);
+        return null;
+    });
     }
     render(){
         return(
@@ -17,28 +47,28 @@ export default class extends Component{
               {({onClick})=>(<Button color = 'danger' onClick = {onClick}>Ẩn Form Đăng Kí</Button>)}
               </FormContext.Consumer>
             </div>
-            <Form>
+            <Form onSubmit = {this.handleSubmit}>
             <Row form>
               <Col md={6}>
                 <FormGroup>
                   <Label for="email">Email</Label>
-                  <Input type="email" name="email" id="email" placeholder="Email" />
+                  <Input onChange ={this.onChange} type="email" name="email" id="email" placeholder="Email" />
                 </FormGroup>
               </Col>
               <Col md={6}>
                 <FormGroup>
                   <Label for="name">Tên Người Nhận</Label>
-                  <Input type="text" name="name" id="name" placeholder="Tên Người Nhận" />
+                  <Input onChange ={this.onChange} type="text" name="name" id="name" placeholder="Tên Người Nhận" />
                 </FormGroup>
               </Col>
             </Row>
             <FormGroup>
               <Label for="address">Địa Chỉ</Label>
-              <Input type="text" name="address" id="address" placeholder="Địa Chỉ"/>
+              <Input onChange ={this.onChange} type="text" name="address" id="address" placeholder="Địa Chỉ"/>
             </FormGroup>
             <FormGroup>
                   <Label for="phone">Số Điện Thoại</Label>
-                  <Input type="text" name="phone" id="phone" placeholder  = 'Số Điện Thoại'/>
+                  <Input onChange ={this.onChange} type="text" name="phone" id="phone" placeholder  = 'Số Điện Thoại'/>
             </FormGroup>
             <FormGroup check>
               <Input type="checkbox" name="check" id="exampleCheck"/>
