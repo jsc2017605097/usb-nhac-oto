@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer')
-router.post('/form',function(req,res,next){
+router.post('/',function(req,res,next){
     console.log(req.body);
     const html = `
     <div style = 'background:#ddd;

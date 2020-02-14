@@ -19,7 +19,6 @@ mongoose.connect(db,{
     .catch(error=>console.log(error));
 
 const authorRouter = require('./routes/author');
-const indexRouter = require('./routes/index.js');
 app.use('/author',authorRouter);
 app.use('/api',require('./routes/api'));
 if (process.env.NODE_ENV === 'production') {
