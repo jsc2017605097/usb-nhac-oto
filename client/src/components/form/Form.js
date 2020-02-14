@@ -28,7 +28,7 @@ export default class extends Component{
       console.log("name", name);
       console.log("address", address);
       console.log("phone", phone);
-      const form = await axios.post('/api/form',{
+      const form = await axios.post('/api',{
         email,
         name,
         address,
