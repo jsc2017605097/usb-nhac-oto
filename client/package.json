@@ -8,6 +8,7 @@
   ],
   "main": "src/index.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "hover.css": "2.3.2",
     "react": "16.12.0",
