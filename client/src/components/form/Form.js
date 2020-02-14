@@ -3,7 +3,7 @@ import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './Form.css'
 import {FormContext} from '../../context/Form';
 import Fade from 'react-reveal/Fade';
-
+const axios = require('axios');
 export default class extends Component{
     constructor(props){
         super(props);
