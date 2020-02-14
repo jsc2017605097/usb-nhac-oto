@@ -1,0 +1,14 @@
+.navMobile{
+    background-color: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 33;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0px 10px;
+}
+.navMobile .menu{
+    cursor: pointer;
+}

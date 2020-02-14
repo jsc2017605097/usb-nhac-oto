@@ -1,0 +1,33 @@
+.form{
+    position: fixed;
+    width: 100%;
+    padding: 50px 50px;
+    color: #ffffff;
+    z-index: 99 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+}
+
+.form Form{
+    background-color: rgba(0, 0, 0, 1);
+    padding: 100px 100px;
+    width: 50%;
+    z-index: 3999 !important;
+    position: relative;
+}
+
+@media only screen and (max-width: 812px) {
+    .form Form{
+        width: 100%;
+        padding:40px 20px;
+        border-radius: 10px;
+    }
+    .form{
+        padding:20px 10px;
+        background-color:rgba(0, 0, 0, 0.5);
+    }
+  } 

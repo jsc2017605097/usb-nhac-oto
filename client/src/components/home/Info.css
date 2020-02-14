@@ -1,0 +1,17 @@
+.infoUsb{
+    background-image: url('./img/infoUsb.jpg');
+    color:#fff;
+    background-position: center;
+    background-size: cover;
+    text-shadow: 0px 0px 5px rgb(0,0,0);
+    padding:20px 0px;
+}
+.infoUsb h1{
+    margin-bottom:20px ;
+}
+.infoUsb h4{
+    margin-top: 10px;
+}
+.infoUsb button{
+    margin-top: 20px;
+}

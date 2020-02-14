@@ -1,0 +1,21 @@
+.why h1{
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.why{
+    font-family: 'Montserrat', sans-serif;
+    padding:20px 0px;
+    background: #993844;  /* fallback for old browsers */
+    overflow: hidden;
+}
+
+.why .tuvanngay{
+    padding:10px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}

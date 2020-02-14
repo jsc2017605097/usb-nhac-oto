@@ -1,0 +1,24 @@
+
+.bar ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    position:fixed;
+    top:100px;
+    right: 0px ;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 3;
+    padding-top:20px;
+}
+.bar ul a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color:#fff;
+}
+.font-weight{
+    font-weight: bold !important;
+    font-size: 20px;
+}
