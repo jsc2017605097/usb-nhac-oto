@@ -29,6 +29,8 @@ async function main() {
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
     html: "<b>Hello world? do cuong here</b>" // html body
+  },function(error, responsive){
+    console.log( error || responsive)
   });
 
   console.log("Message sent: %s", info.messageId);
