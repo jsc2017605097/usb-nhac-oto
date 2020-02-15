@@ -11,7 +11,7 @@ async function main() {
 
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    host: 'smtp.gmail.com',
     port: 587,
     auth: {
         user: 'nguyendocuongbka@gmail.com',
