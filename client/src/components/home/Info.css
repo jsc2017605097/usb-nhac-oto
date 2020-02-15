@@ -3,15 +3,28 @@
     color:#fff;
     background-position: center;
     background-size: cover;
-    text-shadow: 0px 0px 5px rgb(0,0,0);
     padding:20px 0px;
+}
+.infoUsb img{
+    border-radius: 20px;
 }
 .infoUsb h1{
     margin-bottom:20px ;
 }
 .infoUsb h4{
     margin-top: 10px;
+    font-size: 28px;
+    font-weight: bold;
 }
 .infoUsb button{
     margin-top: 20px;
+}
+.font-info{
+    font-size: 20px;
+}
+.a{
+    background-color: bisque;
+    color: black;
+    border-radius: 20px;
+    padding: 5px 5px;
 }

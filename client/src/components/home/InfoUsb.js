@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button,Container,Row,Col} from 'reactstrap';
-import Thongso1 from './img/thongso1.jpg';
-import Thongso2 from './img/thongso2.jpg';
+import Thongso1 from './img/info1.jpg';
+import Thongso2 from './img/info2.jpg';
 import './Info.css'
 import {FaInfoCircle,FaCheckCircle} from 'react-icons/fa';
 import {GiUsbKey} from 'react-icons/gi';
@@ -32,30 +32,39 @@ export default function(){
                         </Fade>
                     </Col>
                     <Col xs = '12' sm = '6' xl = '6' md='6' lg = '6' >
+                        <div className = 'a'>
                         <h4><FaInfoCircle style = {colorRed} /> Thông Số Kĩ Thuật</h4>
                         <Flip right cascade>
-                        <div>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
+                        <div className = 'font-info'>
+                            <p><FaCheckCircle style={colorGreen} />Usb chính hãng: Kingston, Sandisk, Transcend, HP...</p>
+                            <p><FaCheckCircle style={colorGreen} />Dung lượng: 16/32/64/128 GB</p>
+                            <p><FaCheckCircle style={colorGreen} />Tốc độ: 100MB/s</p>
+                            <p><FaCheckCircle style={colorGreen} />Chất liệu: Nhôm, Hợp kim, Nhựa đúc nguyên khối</p>
+                            <p><FaCheckCircle style={colorGreen} />Kích thước: Nhỏ gọn</p>
+                            <p><FaCheckCircle style={colorGreen} />Bảo hành: Chính hãng 5 năm</p>
                         </div>
+                        
                         </Flip>
+                        </div>
                     </Col>
                 </Row>
+                <br />
                 <Row>
-                    <Col xs = '12' sm = '6' xl = '6' md='6' lg = '6' >
-                        <h4 className  = 'text-right' ><FaInfoCircle style = {colorRed} /> Thông Số Kĩ Thuật</h4>
+                    <Col  xs = '12' sm = '6' xl = '6' md='6' lg = '6' >
+                        <div className = 'a'>
+                        <h4 className  = 'text-right' ><FaInfoCircle style = {colorRed} /> Có gì trong USB Zcarmedia ?</h4>
                         <Flip left cascade>
-                        <div className  = 'text-right'  >
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
-                            <p><FaCheckCircle style={colorGreen} />Thông số thứ nhất</p>
+                        <div className  = 'font-info'  >
+                            <p><FaCheckCircle style={colorGreen} />Video nhạc theo yêu cầu chất lượng Full HD trở lên</p>
+                            <p><FaCheckCircle style={colorGreen} />Nhạc Vàng, Trữ tình Bolero</p>
+                            <p><FaCheckCircle style={colorGreen} />Nhạc trẻ HOT, Nhạc Đỏ tiền chiến</p>
+                            <p><FaCheckCircle style={colorGreen} />Nhạc Sàn, Remix, Nonstop</p>
+                            <p><FaCheckCircle style={colorGreen} />Nhạc không lời, Nhạc thiếu nhi</p>
+                            <p><FaCheckCircle style={colorGreen} />Nhạc theo yêu cầu của quý khách</p>
                         </div>
+                        
                         </Flip>
+                        </div>
                     </Col>
                     <Col xs = '12' sm = '6' xl = '6' md = {{size:6}} lg = '6' >
                         <Fade right>

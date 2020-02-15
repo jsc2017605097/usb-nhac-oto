@@ -25,7 +25,7 @@ export default class extends Component{
     }
     async handleSubmit(event){
       event.preventDefault();
-      const {email,name,phone,address} = this.state;
+      const {email,name,phone,address,note,info} = this.state;
       console.log("name", name);
       console.log("address", address);
       console.log("phone", phone);
