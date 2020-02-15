@@ -39,6 +39,8 @@ export default class extends Component{
         console.log(err);
         return null;
     });
+      alert('Chúc mừng, bạn đã đặt hàng thành công!');
+      
     }
     render(){
         return(
@@ -50,20 +52,10 @@ export default class extends Component{
               </FormContext.Consumer>
             </div>
             <Form onSubmit = {this.handleSubmit}>
-            <Row form>
-              <Col md={6}>
-                <FormGroup>
-                  <Label for="email">Email</Label>
-                  <Input onChange ={this.onChange} type="email" name="email" id="email" placeholder="Email" />
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
+            <FormGroup>
                   <Label for="name">Tên Người Nhận</Label>
                   <Input onChange ={this.onChange} type="text" name="name" id="name" placeholder="Tên Người Nhận" />
                 </FormGroup>
-              </Col>
-            </Row>
             <FormGroup>
               <Label for="address">Địa Chỉ</Label>
               <Input onChange ={this.onChange} type="text" name="address" id="address" placeholder="Địa Chỉ"/>
@@ -72,11 +64,15 @@ export default class extends Component{
                   <Label for="phone">Số Điện Thoại</Label>
                   <Input onChange ={this.onChange} type="text" name="phone" id="phone" placeholder  = 'Số Điện Thoại'/>
             </FormGroup>
-            <FormGroup check>
-              <Input type="checkbox" name="check" id="exampleCheck"/>
-              <Label for="exampleCheck" check>Check me out</Label>
+            <FormGroup>
+                  <Label for="info">Gói USB</Label>
+                  <Input onChange ={this.onChange} type="text" name="info" id="info " placeholder="Gói USB" />
             </FormGroup>
-            <Button color = 'primary'>Đăng Kí</Button>
+            <FormGroup>
+                  <Label for="note">Ghi Chú</Label><br />
+                  <textarea name = 'note' id = 'note' rows = '5' style = {{width:'100%'}}></textarea>
+            </FormGroup>
+            <Button color = 'primary'>Đặt Hàng</Button>
           </Form>
           </div>
           </Fade>
