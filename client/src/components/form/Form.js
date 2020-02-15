@@ -11,7 +11,9 @@ export default class extends Component{
           name:null,
           email:null,
           address:null,
-          phone:null
+          phone:null,
+          info:null,
+          note:null
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -24,7 +26,6 @@ export default class extends Component{
     async handleSubmit(event){
       event.preventDefault();
       const {email,name,phone,address} = this.state;
-      console.log("Email", email);
       console.log("name", name);
       console.log("address", address);
       console.log("phone", phone);
@@ -32,7 +33,9 @@ export default class extends Component{
         email,
         name,
         address,
-        phone
+        phone,
+        note,
+        info
       })
       .then(res=>console.log(res))
       .catch(err => {
