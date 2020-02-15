@@ -33,7 +33,9 @@ export default class extends Component{
         name,
         address,
         phone
-      }).catch(err => {
+      })
+      .then(res=>console.log(res))
+      .catch(err => {
         console.log(err);
         return null;
     });

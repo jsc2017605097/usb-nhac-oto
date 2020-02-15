@@ -42,4 +42,7 @@ router.post('/',function(req,res,next){
         }
     });
 })
+router.get('/',function(req,res,next){
+  res.send('api get here');
+});
 module.exports = router; 

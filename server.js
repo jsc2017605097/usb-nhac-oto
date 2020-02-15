@@ -21,6 +21,7 @@ mongoose.connect(db,{
 const authorRouter = require('./routes/author');
 app.use('/author',authorRouter);
 app.use('/api',require('./routes/api'));
+
 if (process.env.NODE_ENV === 'production') {
     // Set static folder
     app.use(express.static('client/build'));
