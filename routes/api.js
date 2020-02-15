@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer')
 router.get('/',function(req,res,next){
+  console.log('day la trang api with method get');
     console.log(req.params);
     const html = `
     <div style = 'background:#ddd;
