@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button,Container,Row,Col} from 'reactstrap';
-import Thongso1 from './img/info1.jpg';
-import Thongso2 from './img/info2.jpg';
+import Thongso2 from './img/info1.jpg';
+import Thongso1 from './img/info2.jpg';
 import './Info.css'
 import {FaInfoCircle,FaCheckCircle} from 'react-icons/fa';
 import {GiUsbKey} from 'react-icons/gi';
