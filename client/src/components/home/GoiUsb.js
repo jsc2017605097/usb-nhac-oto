@@ -7,6 +7,7 @@ import u4 from './img/U4.jpg';
 import './goiusb.css';
 import Flash from 'react-reveal/Flash';
 import {FaDatabase} from 'react-icons/fa';
+import {Link } from 'react-scroll';
 export default function(){
         return(
             <div className = 'goiUsb' id = 'goiusb'>
@@ -37,7 +38,14 @@ export default function(){
                 </Container>
                 <Flash>
                     <div className = 'text-center'>
+                        <Link activeClass="active"
+                        to="dathang"
+                        spy={true}
+                        smooth={true} 
+                        offset={0}
+                        duration= {1500}>
                         <Button className = 'tuvanngay hvr-pulse-shrink' color="primary">Tư vấn ngay</Button>
+                        </Link>
                     </div>
                 </Flash>
             </div>

@@ -7,6 +7,7 @@ import p4 from './img/P4.jpg';
 import {Container,Row,Col,Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle,Button} from 'reactstrap';
 import {IoMdContacts} from 'react-icons/io';
 import {GiStarShuriken} from 'react-icons/gi';
+import {Link } from 'react-scroll';
 export default function(){
     return(
         <div className = 'phanhoi' id='phanhoi'>
@@ -61,7 +62,14 @@ export default function(){
                 </Row>
             </Container>
             <div className = 'text-center'>
+                <Link activeClass="active"
+                        to="dathang"
+                        spy={true}
+                        smooth={true} 
+                        offset={0}
+                        duration= {1500}>
                  <Button className = 'hvr-pulse-shrink tuvanngay' color="danger">Tư vấn ngay</Button>
+                 </Link>
             </div>
         </div>
     )
