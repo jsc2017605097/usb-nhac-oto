@@ -57,6 +57,7 @@ export default function(){
                     </Col>
                    
                 </Row>
+                <br />
                 <Flash>
                     <ButtonDatHang />
                 </Flash>
