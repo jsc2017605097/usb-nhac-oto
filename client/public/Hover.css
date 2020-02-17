@@ -4053,8 +4053,7 @@
 .hvr-curl-top-left:hover:before, .hvr-curl-top-left:focus:before, .hvr-curl-top-left:active:before {
   width: 75px;
   height: 75px;
-  top:3px;
-  left:2px;
+
 }
 
 /* Curl Top Right */

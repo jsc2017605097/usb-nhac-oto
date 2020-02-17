@@ -3,12 +3,9 @@ import './Why.css';
 import Fade from 'react-reveal/Fade';
 import Why1 from './img/Why1.jpg';
 import Why2 from './img/anh2.jpg';
-import Why3 from './img/Why3.jpg';
-import Why4 from './img/Why4.jpg';
 import Flash from 'react-reveal/Flash';
-import {FormContext} from '../../context/Form';
-import {FaQuestionCircle, FaRProject} from 'react-icons/fa';
-import {Row,Col,Container,Card, CardImg, Button} from 'reactstrap';
+import {FaQuestionCircle} from 'react-icons/fa';
+import {Row,Col,Container,Card, CardImg, CardTitle,CardText} from 'reactstrap';
 import {GiStarShuriken} from 'react-icons/gi';
 import ButtonDatHang from './ButtonDatHang';
 export default function(){
@@ -26,6 +23,8 @@ export default function(){
                     <Fade right >
                     <Card  style = {{border:'none',cursor:'pointer'}} className ='hvr-wobble-to-bottom-right hvr-curl-top-left'>
                         <CardImg top width = '100%' src={Why1} alt="Card image cap" />
+                        <CardTitle>Card title</CardTitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                     </Card>
                     </Fade >
                 </Col>
@@ -35,7 +34,8 @@ export default function(){
                      <Fade left >
                     <Card style = {{border:'none',cursor:'pointer'}} className ='hvr-wobble-to-bottom-right hvr-curl-top-left'>
                         <CardImg top width = '100%' src={Why2} alt="Card image cap" />
-                       
+                        <CardTitle>Card title</CardTitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                     </Card>
                     </Fade>
                 </Col>
