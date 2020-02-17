@@ -13,9 +13,13 @@ import Media from 'react-media';
 import NavMobile from './components/header/NavMobile';
 import Bar from './components/header/Bar';
 import top from './components/home/img/top.png';
+import bottom from './components/home/img/bottom.png';
 
 const toTop = ()=>{
   scroll.scrollToTop();
+}
+const toBottom = ()=>{
+  scroll.scrollToBottom();
 }
 export default function() {
   return (
@@ -48,7 +52,8 @@ export default function() {
               {matches => (
                   <Fragment>
                   {matches.ipadproAndComputer && <div className = 'totop'>
-            <img onClick = {toTop} className = 'radius' width = '40px' src = {top} alt = 'totop png' /> 
+            <img onClick = {toTop} className = 'radius' width = '40px' src = {top} alt = 'totop png' /> <br />
+            <img onClick = {toBottom} className = 'radius' width = '40px' src = {bottom} alt = 'totop png' /> 
           </div>}
                   </Fragment>
               )}
