@@ -29,6 +29,7 @@ body {
     color: aliceblue;
     text-align: center;
     padding: 0px 20px;
+    margin-bottom: 10px;
 }
 .totop{
   position:fixed;
@@ -59,4 +60,8 @@ body {
 }
 .dathang label{
   color: #fff;
+}
+.button-tuvan{
+  font-family:'oswald', sans-serif;
+  font-size:24px ;
 }

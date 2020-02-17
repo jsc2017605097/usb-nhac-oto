@@ -40,11 +40,19 @@ export default function() {
           <Header />
           <FormContext.Consumer>
             {({display})=>( display && <Form />)}
-            
           </FormContext.Consumer>
-          <div className = 'totop'>
+          <Media queries={{ 
+              iphoneAndIpad:"(max-width: 768px)",
+              ipadproAndComputer: "(min-width: 769px)"
+            }}>
+              {matches => (
+                  <Fragment>
+                  {matches.ipadproAndComputer && <div className = 'totop'>
             <img onClick = {toTop} className = 'radius' width = '40px' src = {top} alt = 'totop png' /> 
-          </div>
+          </div>}
+                  </Fragment>
+              )}
+            </Media>
           <FormContext.Consumer>
           {({menu})=>( menu && <Bar />)}
           </FormContext.Consumer>

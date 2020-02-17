@@ -17,7 +17,7 @@ export default function() {
         <li >
         <Link
           activeClass="active"
-          to="tuvan"
+          to="dathang"
           spy={true}
           smooth={true}
           offset={-70}

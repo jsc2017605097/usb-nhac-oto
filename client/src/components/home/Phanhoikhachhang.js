@@ -4,15 +4,15 @@ import p1 from './img/P1.jpg';
 import p2 from './img/P2.jpg';
 import p3 from './img/P3.jpg';
 import p4 from './img/P4.jpg';
-import {Container,Row,Col,Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle,Button} from 'reactstrap';
+import {Container,Row,Col,Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle} from 'reactstrap';
 import {IoMdContacts} from 'react-icons/io';
 import {GiStarShuriken} from 'react-icons/gi';
-import {Link } from 'react-scroll';
+import ButtonDatHang from './ButtonDatHang';
 export default function(){
     return(
         <div className = 'phanhoi' id='phanhoi'>
-            <div className = 'title'><IoMdContacts/> KHÁCH HÀNG NÓI GÌ VỀ USB NHẠC</div>
-            <div className = 'text-center'  style = {{color:'white'}}><GiStarShuriken /><GiStarShuriken /><GiStarShuriken /></div>
+            <div className = 'title'><IoMdContacts style = {{margin:'0 10px 0 0'}}/> KHÁCH HÀNG NÓI GÌ VỀ USB NHẠC</div>
+            <div className = 'text-center'  style = {{color:'white',margin:'0 0px 10px 0'}}><GiStarShuriken /><GiStarShuriken /><GiStarShuriken /></div>
             <div className = 'text-center'  style = {{color:'white'}}>
                     <p>Chúng tôi nỗ lực mỗi ngày để mang đến cho khách hàng sản phẩm và dịch vụ tốt nhất</p>
                     <p>Sự hài lòng của quý khách chính là thành công lớn nhất của chúng tôi</p>
@@ -61,16 +61,7 @@ export default function(){
                     </Col>
                 </Row>
             </Container>
-            <div className = 'text-center'>
-                <Link activeClass="active"
-                        to="dathang"
-                        spy={true}
-                        smooth={true} 
-                        offset={0}
-                        duration= {1500}>
-                 <Button className = 'hvr-pulse-shrink tuvanngay' color="danger">Tư vấn ngay</Button>
-                 </Link>
-            </div>
+            <ButtonDatHang />
         </div>
     )
 }

@@ -9,7 +9,7 @@ import cs4 from './img/cs4.png';
 export default function(){
     return(
         <div className = 'chinhsach' id = 'chinhsach'>
-            <div className = 'title'>
+            <div className = 'title' style = {{color:'#2C5364'}}>
                 CHÍNH SÁCH BÁN HÀNG
             </div>
             <div className = 'text-center'  style = {{color:'white'}}><GiStarShuriken /><GiStarShuriken /><GiStarShuriken /></div>

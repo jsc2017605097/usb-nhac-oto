@@ -10,15 +10,8 @@ export default class extends Component{
             <Container>
                 <Row>
                     <Col xs = '12' sm = '12' md = '6' lg = '6' xl = '6'>
-                        <Card inverse>
+                        <Card style={{background:'none',border:'none'}} inverse>
                             <CardImg width="100%" src={dathang} alt="Card image cap" />
-                            <CardImgOverlay>
-                                <CardTitle>Card Title</CardTitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                                <CardText>
-                                    <small className="text-muted">Last updated 3 mins ago</small>
-                                </CardText>
-                            </CardImgOverlay>
                         </Card>
                     </Col>
                     <Col xs = '12' sm = '12' md = '6' lg = '6' xl = '6'>

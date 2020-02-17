@@ -3,9 +3,8 @@ import Nav from "./Navbar";
 import "./Header.css";
 import Fade from 'react-reveal/Fade';
 import Flash from 'react-reveal/Flash';
-import {Button} from 'reactstrap';
-import {FormContext} from '../../context/Form';
 import Media from 'react-media';
+import ButtonDatHang from "../home/ButtonDatHang";
 export default class extends Component {
   constructor(props){
     super(props);
@@ -28,16 +27,12 @@ export default class extends Component {
         <div className="wrapper">
           <Fade left cascade>
           <div className="htitle fontTitle">
-            <h1>USB SẴN NHẠC & VIDEO CHUYÊN DỤNG CHO ÔTÔ</h1>
+            <h1 style={{margin:'0px 0 30px 0'}}>USB SẴN NHẠC & VIDEO CHUYÊN DỤNG CHO ÔTÔ</h1>
             <p>ĐẶT HÀNG THEO YÊU CẦU</p>
           </div>
           </Fade>
           <Flash>
-          <div className="order">
-          <FormContext.Consumer>
-            {({onClick})=>(<Button onClick = {onClick} color="danger" className="hvr-pulse-shrink">Đặt Hàng</Button>)}
-          </FormContext.Consumer>
-          </div>
+            <ButtonDatHang />
           </Flash>
         </div>
       </div>
