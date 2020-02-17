@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './Form.css'
 import {FormContext} from '../../context/Form';
 import Fade from 'react-reveal/Fade';
+import {Redirect} from 'react-router-dom';
 const axios = require('axios');
 export default class extends Component{
     constructor(props){
@@ -13,7 +14,8 @@ export default class extends Component{
           address:null,
           phone:null,
           info:null,
-          note:null
+          note:null,
+          dangkithanhcong:false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -29,7 +31,7 @@ export default class extends Component{
       console.log("name", name);
       console.log("address", address);
       console.log("phone", phone);
-      const form = await axios.post('/api',{
+      const form = await axios.get('/api',{
         email,
         name,
         address,
@@ -42,19 +44,26 @@ export default class extends Component{
         console.log(err);
         return null;
     });
-      alert('Chúc mừng, bạn đã đặt hàng thành công!');
+      this.setState({
+        dangkithanhcong:true
+      })
       
     }
     render(){
+        if(this.state.dangkithanhcong){
+          return <Redirect to='/dangkithanhcong' />
+        }
         return(
           <Fade top>
             <div className = 'form fixed-bottom'>
-            <div>
+            
+            <Form onSubmit = {this.handleSubmit}>
+            <div className = 'exit text-right'>
               <FormContext.Consumer>
-              {({onClick})=>(<Button color = 'danger' onClick = {onClick}>Ẩn Form Đăng Kí</Button>)}
+              {({onClick})=>(<Button className = ' ' color = 'danger' onClick = {onClick}>X</Button>)}
               </FormContext.Consumer>
             </div>
-            <Form onSubmit = {this.handleSubmit}>
+            <div>
             <FormGroup>
                   <Label for="name">Tên Người Nhận</Label>
                   <Input onChange ={this.onChange} type="text" name="name" id="name" placeholder="Tên Người Nhận" />
@@ -76,6 +85,7 @@ export default class extends Component{
                   <textarea name = 'note' id = 'note' rows = '5' style = {{width:'100%'}}></textarea>
             </FormGroup>
             <Button color = 'primary'>Đặt Hàng</Button>
+            </div>
           </Form>
           </div>
           </Fade>

@@ -1,0 +1,21 @@
+.goiUsb{
+    padding:20px 0px;
+    color: #fff;
+}
+.goiUsb .title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.goiUsb img{
+    border-radius: 20px;
+}
+.tuvanngay{padding:10px 10px;
+font-weight: bold;
+font-size: 20px;
+margin-top: 10px;
+}

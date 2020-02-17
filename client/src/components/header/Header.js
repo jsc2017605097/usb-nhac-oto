@@ -6,7 +6,6 @@ import Flash from 'react-reveal/Flash';
 import {Button} from 'reactstrap';
 import {FormContext} from '../../context/Form';
 import Media from 'react-media';
-import NavMobile from './NavMobile';  
 export default class extends Component {
   constructor(props){
     super(props);
@@ -28,7 +27,7 @@ export default class extends Component {
         
         <div className="wrapper">
           <Fade left cascade>
-          <div className="title fontTitle">
+          <div className="htitle fontTitle">
             <h1>USB SẴN NHẠC & VIDEO CHUYÊN DỤNG CHO ÔTÔ</h1>
             <p>ĐẶT HÀNG THEO YÊU CẦU</p>
           </div>

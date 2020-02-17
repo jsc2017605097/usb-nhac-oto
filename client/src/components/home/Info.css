@@ -1,15 +1,20 @@
 .infoUsb{
-    background-image: url('./img/infoUsb.jpg');
-    color:#fff;
-    background-position: center;
-    background-size: cover;
     padding:20px 0px;
+    overflow-x: hidden;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 .infoUsb img{
     border-radius: 20px;
 }
 .infoUsb h1{
     margin-bottom:20px ;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .infoUsb h4{
     margin-top: 10px;
@@ -17,7 +22,10 @@
     font-weight: bold;
 }
 .infoUsb button{
-    margin-top: 20px;
+    padding:10px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
 }
 .font-info{
     font-size: 20px;

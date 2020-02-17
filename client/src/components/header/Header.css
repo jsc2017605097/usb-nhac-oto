@@ -24,7 +24,11 @@
   text-decoration: none;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
   font-family: "Oswald", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
+}
+.navbar ul li a:hover{
+  color: #fff;
+  cursor: pointer;
 }
 .wrapper {
   display: flex;
@@ -32,7 +36,7 @@
   justify-content: center;
   height: 100%;
 }
-.title {
+.htitle {
   text-align: center;
   color: #fff;
   text-transform: uppercase;

@@ -2,6 +2,6 @@ import React, { Component } from "react";
 
 export default class extends Component {
   render() {
-    return <div className="footer">Footer</div>;
+    return <section className="footer" id = "footer">Footerdf</section>;
   }
 }

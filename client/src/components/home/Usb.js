@@ -8,7 +8,6 @@ import './Info.css'
 import {GiUsbKey} from 'react-icons/gi';
 import Fade from 'react-reveal/Fade';
 import Flash from 'react-reveal/Flash';
-import {FormContext} from '../../context/Form';
 export default function(){
     const colorRed = {
         color:'red'
@@ -21,7 +20,7 @@ export default function(){
     }
     return(
         <div className = 'infoUsb' id = 'info'>
-            <div className = 'title'><GiUsbKey /> USB CHUYÊN DỤNG CHO OTO</div>
+            <h1 className = 'text-center fontTitle'><GiUsbKey style = {colorBlack} /> USB CHUYÊN DỤNG CHO OTO</h1>
             <Container>
                 <Row>
                     <Col xs = '12' sm = '6' xl = '6' md = {{size:6}} lg = '6' >
@@ -41,7 +40,7 @@ export default function(){
                 </Row>
                 <br />
                 <Row>
-                    <Col xs = {{size:12,order:2}} sm = '6' xl = '6' md={{size:6,order:1}} lg = {{size:6,order:1}} >
+                    <Col xs = {{size:12,order:2}} sm = '6' xl = '6' md='6' lg = '6' >
                     <Fade left>
                     <div>
                             <img className = 'imgShadow' width = '100% ' src = {info22} alt = 'usb for car' />
@@ -57,9 +56,7 @@ export default function(){
                 </Row>
                 <Flash>
                 <div className = 'text-center'>
-                    <FormContext.Consumer>
-                        {({onClick})=>(<Button onClick = {onClick} className = 'hvr-pulse-shrink tuvanngay' color="danger">Tư vấn ngay</Button>)}
-                    </FormContext.Consumer>
+                    <Button className = 'hvr-pulse-shrink tuvanngay' color="danger">Tư vấn ngay</Button>
                 </div>
                 </Flash>
             </Container>

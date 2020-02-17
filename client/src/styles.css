@@ -6,7 +6,6 @@ body {
   margin: 0px;
   font-family: 'Montserrat', sans-serif;
   position: relative;
-  overflow-x: hidden;
   
 }
 .fontTitle {
@@ -19,4 +18,45 @@ body {
 .abc{
   z-index: 999 !important;
   position: relative;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    text-align: center;
+    padding: 0px 20px;
+}
+.totop{
+  position:fixed;
+  display: inline-block;
+  top: 50%;
+  transform: translate(0,-50%);
+  z-index: 5;
+  color: red;
+  font-size: 28px;
+  cursor: pointer;
+  
+}
+.radius{
+  border-radius: 50%;
+}
+.dathang{
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding:20px 0px;
+}
+.card-img-overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #0F2027;
+}
+.dathang label{
+  color: #fff;
 }
