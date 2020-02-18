@@ -2,3 +2,9 @@
     background-color: #fff;
     color: #2C5364;
 }
+.csitem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

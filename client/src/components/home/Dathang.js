@@ -1,12 +1,15 @@
 import React,{Component} from 'react';
 import {Container, Row, Col,Card, CardTitle, CardText, CardImg, CardImgOverlay,Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import dathang from './img/DATHANG.png';
-
+import Countdown from '../../Countdown';
+import {GiStarShuriken} from 'react-icons/gi'
 export default class extends Component{
     render(){
     return(
         <div className = 'dathang' id = 'dathang'>
-            <div className = 'title'>NHANH TAY ĐẶT HÀNG NÀO</div>
+            <Countdown timeTillDate="05 26 2019, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
+            <div className = 'text-center'  style = {{color:'#fff'}}><GiStarShuriken /><GiStarShuriken /><GiStarShuriken /></div>
+            <div style = {{margin:'20px 0px 30px 0'}} className = 'title'>NHANH TAY ĐẶT HÀNG NÀO</div>
             <Container>
                 <Row>
                     <Col xs = '12' sm = '12' md = '6' lg = '6' xl = '6'>
@@ -18,7 +21,7 @@ export default class extends Component{
                         <Form onSubmit = {this.handleSubmit}>
             <div>
             <FormGroup>
-                  <Label for="name">Tên Người Nhận</Label>
+                      <Label for="name">Tên Người Nhận</Label>
                   <Input onChange ={this.onChange} type="text" name="name" id="name" placeholder="Tên Người Nhận" />
                 </FormGroup>
             <FormGroup>

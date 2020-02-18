@@ -45,7 +45,7 @@ export default class Countdown extends React.Component {
 
         return (
             <div>
-                <h1>Thời Gian Ưu Đãi Sắp Hết</h1>
+                <h1 style ={{color:'#fff'}}>Thời Gian Ưu Đãi Sắp Hết</h1>
                 <div className="countdown-wrapper">
                     {days && (
                         <div className="countdown-item">
@@ -85,7 +85,7 @@ const SVGCircle = ({ radius }) => (
     <svg className="countdown-svg">
         <path
             fill="none"
-            stroke="#333"
+            stroke="#fff"
             stroke-width="4"
             d={describeArc(50, 50, 48, 0, radius)}
         />
