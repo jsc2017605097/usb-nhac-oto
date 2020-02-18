@@ -10,12 +10,12 @@ export default class extends Component{
         super(props);
         this.state = {
           name:null,
-          email:null,
           address:null,
           phone:null,
           info:null,
           note:null,
-          dangkithanhcong:false
+          dangkithanhcong:false,
+          error:[]
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -27,12 +27,11 @@ export default class extends Component{
     }
     async handleSubmit(event){
       event.preventDefault();
-      const {email,name,phone,address,note,info} = this.state;
-      console.log("name", name);
-      console.log("address", address);
-      console.log("phone", phone);
+      const {name,phone,address,note,info,error} = this.state;
+      if(!Number(phone)){
+        
+      }
       const form = await axios.post('/api',{
-        email,
         name,
         address,
         phone,
@@ -47,14 +46,6 @@ export default class extends Component{
       this.setState({
         dangkithanhcong:true
       })
-      this.setState({
-        name:null,
-        email:null,
-        address:null,
-        phone:null,
-        info:null,
-        note:null
-      });
       
     }
     render(){

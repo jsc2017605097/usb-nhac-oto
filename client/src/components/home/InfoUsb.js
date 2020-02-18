@@ -1,14 +1,11 @@
 import React from 'react';
-import {Button,Container,Row,Col} from 'reactstrap';
-import Thongso2 from './img/info1.jpg';
-import Thongso1 from './img/info2.jpg';
-import info11 from './img/info11.jpg';
+import {Container,Row,Col} from 'reactstrap';
+import info11 from './img/info11.png';
 import info22 from './img/info22.jpg';
 import './Info.css'
 import {GiUsbKey,GiStarShuriken} from 'react-icons/gi';
 import Fade from 'react-reveal/Fade';
 import Flash from 'react-reveal/Flash';
-import {FormContext} from '../../context/Form';
 import ButtonDatHang from './ButtonDatHang';
 export default function(){
     return(
