@@ -11,25 +11,16 @@ import Flash from 'react-reveal/Flash';
 import {FormContext} from '../../context/Form';
 import ButtonDatHang from './ButtonDatHang';
 export default function(){
-    const colorRed = {
-        color:'red'
-    }
-    const colorGreen = {
-        color:'green'
-    }
-    const colorBlack = {
-        color:'black'
-    }
     return(
         <div className = 'infoUsb' id = 'info'>
             <div className = 'title'><GiUsbKey /> USB CHUYÊN DỤNG CHO OTO</div>
             <div className = 'text-center'  style = {{color:'#fff',margin:'0px 0px 20px 0px'}}><GiStarShuriken /><GiStarShuriken /><GiStarShuriken /></div>
             <Container>
                 <Row>
-                    <Col xs = '12' sm = '6' xl = '6' md = {{size:6}} lg = '6' >
-                        <Fade left >
-                        <div className = 'text-right'>
-                            <img className = 'imgShadow' width = '100% ' src = {Thongso1} alt = 'usb for car' />
+                    <Col xs = {{size:12,order:2}} sm = '6' xl = '6' md={{size:6,order:1}} lg = {{size:6,order:1}} >
+                        <Fade left>
+                        <div>
+                                <img className = 'imgShadow' width = '100% ' src = {info22} alt = 'usb for car' />
                         </div>
                         </Fade>
                     </Col>
@@ -40,22 +31,6 @@ export default function(){
                         </div>
                         </Fade>
                     </Col>
-                </Row>
-                <br />
-                <Row>
-                    <Col xs = {{size:12,order:2}} sm = '6' xl = '6' md={{size:6,order:1}} lg = {{size:6,order:1}} >
-                    <Fade left>
-                    <div>
-                            <img className = 'imgShadow' width = '100% ' src = {info22} alt = 'usb for car' />
-                    </div>
-                    </Fade>
-                    </Col>
-                    <Col xs = {{size:12,order:1}} sm = '6' xl = '6' md = {{size:6}} lg = '6' >
-                        <Fade right>
-                        <img className = 'imgShadow' width = '100%' src = {Thongso2} alt = 'usb for car' />
-                        </Fade>
-                    </Col>
-                   
                 </Row>
                 <br />
                 <Flash>

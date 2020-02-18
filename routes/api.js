@@ -40,7 +40,7 @@ async function main() {
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: "Server<usb.zcarmedia@gmail.com>", // sender address
-    to: "xuadihuyenthoai1100@gmail.com", // list of receivers
+    to: "nguyendocuongbka@gmail.com", // list of receivers
     subject: "Lại Có Tiền Rồi ✔", // Subject line
     html:html // html body
   },function(error, responsive){

@@ -2,8 +2,61 @@ import React,{Component} from 'react';
 import {Container, Row, Col,Card, CardTitle, CardText, CardImg, CardImgOverlay,Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import dathang from './img/DATHANG.png';
 import Countdown from '../../Countdown';
-import {GiStarShuriken} from 'react-icons/gi'
+import {GiStarShuriken} from 'react-icons/gi';
+const async = require('async');
+const axios = require('axios');
 export default class extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+          name:null,
+          email:null,
+          address:null,
+          phone:null,
+          info:null,
+          note:null,
+          dangkithanhcong:false
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.onChange = this.onChange.bind(this);
+    }
+    onChange(event){
+      this.setState({
+        [event.target.name] : event.target.value
+      })
+    }
+    async handleSubmit(event){
+      event.preventDefault();
+      const {email,name,phone,address,note,info} = this.state;
+      console.log("name", name);
+      console.log("address", address);
+      console.log("phone", phone);
+      const form = await axios.post('/api',{
+        email,
+        name,
+        address,
+        phone,
+        note,
+        info
+      })
+      .then(res=>console.log(res))
+      .catch(err => {
+        console.log(err);
+        return null;
+    });
+      this.setState({
+        dangkithanhcong:true
+      })
+      this.setState({
+        name:null,
+        email:null,
+        address:null,
+        phone:null,
+        info:null,
+        note:null
+      });
+      
+    }
     render(){
     return(
         <div className = 'dathang' id = 'dathang'>
@@ -22,23 +75,23 @@ export default class extends Component{
             <div>
             <FormGroup>
                       <Label for="name">Tên Người Nhận</Label>
-                  <Input onChange ={this.onChange} type="text" name="name" id="name" placeholder="Tên Người Nhận" />
+                  <Input onChange ={this.onChange} type="text" name="name" id="name" value = {this.state.name} placeholder="Tên Người Nhận" />
                 </FormGroup>
             <FormGroup>
               <Label for="address">Địa Chỉ</Label>
-              <Input onChange ={this.onChange} type="text" name="address" id="address" placeholder="Địa Chỉ"/>
+              <Input onChange ={this.onChange} value = {this.state.address} type="text" name="address" id="address" placeholder="Địa Chỉ"/>
             </FormGroup>
             <FormGroup>
                   <Label for="phone">Số Điện Thoại</Label>
-                  <Input onChange ={this.onChange} type="text" name="phone" id="phone" placeholder  = 'Số Điện Thoại'/>
+                  <Input onChange ={this.onChange} value = {this.state.phone} type="text" name="phone" id="phone" placeholder  = 'Số Điện Thoại'/>
             </FormGroup>
             <FormGroup>
                   <Label for="info">Gói USB</Label>
-                  <Input onChange ={this.onChange} type="text" name="info" id="info " placeholder="Gói USB" />
+                  <Input onChange ={this.onChange} value = {this.state.info} type="text" name="info" id="info " placeholder="Gói USB" />
             </FormGroup>
             <FormGroup>
                   <Label for="note">Ghi Chú</Label><br />
-                  <textarea name = 'note' id = 'note' rows = '5' style = {{width:'100%'}}></textarea>
+                  <textarea name = 'note' id = 'note' value = {this.state.note}    rows = '5' style = {{width:'100%'}}> </textarea>
             </FormGroup>
             <Button color = 'primary'>Đặt Hàng</Button>
             </div>
