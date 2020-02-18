@@ -14,7 +14,8 @@ import NavMobile from './components/header/NavMobile';
 import Bar from './components/header/Bar';
 import top from './components/home/img/top.png';
 import bottom from './components/home/img/bottom.png';
-
+import Phone from "./Phone";
+import Countdown from './Countdown';
 const toTop = ()=>{
   scroll.scrollToTop();
 }
@@ -62,7 +63,8 @@ export default function() {
           {({menu})=>( menu && <Bar />)}
           </FormContext.Consumer>
           <Home />
-          <Footer />
+          <Footer /> 
+          <Phone />
           </FormProvider>
         </div>
       </Route>
