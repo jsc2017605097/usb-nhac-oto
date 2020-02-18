@@ -1,6 +1,7 @@
 .phone{
     position: fixed;
-    bottom:0px;
+    bottom:-50px;
+    left: -60px;
 }
 .coccoc-alo-ph-circle {
     width: 160px;

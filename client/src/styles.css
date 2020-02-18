@@ -66,6 +66,11 @@ body {
   border-radius: 50%;
   padding: 10px 20px;
 }
+.messenger{
+  position: fixed;
+  bottom: 120px;
+  left: 0px;
+}
 /*==================== 
 	Footer 
 ====================== */

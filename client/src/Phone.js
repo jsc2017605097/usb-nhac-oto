@@ -3,7 +3,7 @@ import './phone.css';
 export default function(){
     return(
         <a href="tel:+0982839405">
-        <div class="phone">
+        <div class="phone" >
             <div class="ring">
                 <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
                     <div class="coccoc-alo-ph-circle"></div>
