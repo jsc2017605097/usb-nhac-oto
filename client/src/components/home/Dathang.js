@@ -1,10 +1,12 @@
 import React,{Component} from 'react';
-import {Container, Row, Col,Card, CardTitle, CardText, CardImg, CardImgOverlay,Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import {Container,Alert, Row, Col,Card, CardTitle, CardText, CardImg, CardImgOverlay,Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import dathang from './img/DATHANG.png';
 import Countdown from '../../Countdown';
 import {GiStarShuriken} from 'react-icons/gi';
+import {FormContext} from '../../context/Form';
 const async = require('async');
 const axios = require('axios');
+
 export default class extends Component{
     constructor(props){
         super(props);
@@ -15,45 +17,108 @@ export default class extends Component{
           info:null,
           note:null,
           dangkithanhcong:false,
-          error:[]
+          error:{}
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
+    handleClose(){
+      this.setState({dangkithanhcong:false});
     }
     onChange(event){
-      this.setState({
-        [event.target.name] : event.target.value
-      })
+      event.preventDefault();
+      let {name,value} =event.target;
+      let {error} = this.state;
+      if(name == 'name'){
+        if(value.length < 2)
+        error.name = 'Tên của bạn phải gồm ít nhất 2 kí tự.'
+        else
+        error.name =null
+      }
+      if(name == 'phone'){
+        if(isNaN(value)){
+          error.phone = 'Số điện thoại phải là số';
+        }
+        else if(value.length < 10){
+          error.phone = 'Số điện thoại phải gồm ít nhất 10 số';
+        }
+        else{
+          error.phone = null;
+        }
+      }
+      if(name == 'address'){
+        if(value.length < 1){
+          error.address = 'Địa chỉ không được để trống';
+        }
+        else
+          error.address = null;
+          console.log(value.length);
+      }
+      this.setState({[event.target.name]:event.target.value,error:error});
     }
     async handleSubmit(event){
       event.preventDefault();
-      const {name,phone,address,note,info,error} = this.state;
-      if(!Number(phone)){
-        
+      let {name,phone,address,note,info,error} = this.state;
+      if(name == null){
+        error.name = 'Tên không được để trống.';
       }
-      const form = await axios.post('/api',{
+      if(phone == null){
+        error.phone = 'Số điện thoại không được để trống.';
+      }
+      if(address == null){
+        error.address = 'Địa chỉ không được để trống.';
+      }
+      this.setState({
+        error:error
+      })
+      let count = 0;
+      const bug = this.state.error;
+      for(var item in bug) {
+      if(bug[item] !== null)
+      ++count;
+      }
+      console.log(count);
+      console.log(this.state.error)
+      if(count > 0)
+      {
+        return;
+      }
+      const form = await axios.get('/api',{
         name,
         address,
         phone,
         note,
         info
       })
-      .then(res=>console.log(res))
+      .then(res=>console.log(res.body))
       .catch(err => {
         console.log(err);
         return null;
     });
       this.setState({
-        dangkithanhcong:true
-      })
-      
+        dangkithanhcong:true,
+        name:'',
+        phone:'',
+        address:'',
+        note:''
+      });
+      console.log('thanh cong')
     }
     render(){
     return(
         <div className = 'dathang' id = 'dathang'>
-            <Countdown timeTillDate="05 26 2019, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
+            <Countdown timeTillDate="2 27 2020, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
             <div className = 'text-center'  style = {{color:'#fff'}}><GiStarShuriken /><GiStarShuriken /><GiStarShuriken /></div>
             <div style = {{margin:'20px 0px 30px 0'}} className = 'title'>NHANH TAY ĐẶT HÀNG NÀO</div>
+            {this.state.dangkithanhcong && <div className = 'thanhcong'>
+            <Alert color="success" className = 'text-center'>
+        Chúc mừng, bạn đã đặt hàng thành công!<br />
+        Nhân viên của chúng tôi sẽ sớm liên lạc với bạn.
+        <br />
+        <Button onClick = {this.handleClose} style = {{margin:'10px 0px 0px 0px'}} color = 'primary'>Thoát</Button>
+      </Alert>
+              </div>}
             <Container>
                 <Row>
                     <Col xs = '12' sm = '12' md = '6' lg = '6' xl = '6'>
@@ -65,26 +130,35 @@ export default class extends Component{
                         <Form onSubmit = {this.handleSubmit}>
             <div>
             <FormGroup>
-                      <Label for="name">Tên Người Nhận</Label>
+                  <Label for="name">Tên Người Nhận</Label>
+                  <b>{this.state.error.name}</b>
                   <Input onChange ={this.onChange} type="text" name="name" id="name" value = {this.state.name} placeholder="Tên Người Nhận" />
                 </FormGroup>
             <FormGroup>
               <Label for="address">Địa Chỉ</Label>
+              <b> {this.state.error.address}</b>
               <Input onChange ={this.onChange} value = {this.state.address} type="text" name="address" id="address" placeholder="Địa Chỉ"/>
             </FormGroup>
             <FormGroup>
                   <Label for="phone">Số Điện Thoại</Label>
+                  <b> {this.state.error.phone}</b>
                   <Input onChange ={this.onChange} value = {this.state.phone} type="text" name="phone" id="phone" placeholder  = 'Số Điện Thoại'/>
+                 
             </FormGroup>
             <FormGroup>
-                  <Label for="info">Gói USB</Label>
-                  <Input onChange ={this.onChange} value = {this.state.info} type="text" name="info" id="info " placeholder="Gói USB" />
-            </FormGroup>
+              <Label for="info">Gói USB</Label>
+              <Input onChange ={this.onChange} name="info" type="select"  id="info">
+                <option>Gói Usb nhạc theo yêu cầu.</option>
+                <option>Gói 1.500 bài hát(320kbs)</option>
+                <option>Gói 250 videos(Full HD)</option>
+                <option>Gói 1.500 bài hát + 250 videos</option>
+              </Input>
+           </FormGroup>
             <FormGroup>
                   <Label for="note">Ghi Chú</Label><br />
                   <textarea name = 'note' id = 'note' value = {this.state.note}    rows = '5' style = {{width:'100%'}}> </textarea>
             </FormGroup>
-            <Button color = 'primary'>Đặt Hàng</Button>
+            <Button  color = 'primary' onMouseMove = {this.onChange}>Đặt Hàng</Button>
             </div>
           </Form>
                     </Col>

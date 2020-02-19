@@ -60,6 +60,23 @@ body {
 .dathang label{
   color: #fff;
 }
+.dathang b{
+  color: red;
+  text-shadow: .4px .4px 1px #000;
+  display: block;
+}
+.thanhcong{
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top:0px;
+  height: 100vh;
+  z-index: 14;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .button-tuvan{
   font-family:'oswald', sans-serif;
   font-size:24px ;
@@ -71,6 +88,7 @@ body {
   bottom: 120px;
   left: 0px;
 }
+
 /*==================== 
 	Footer 
 ====================== */
