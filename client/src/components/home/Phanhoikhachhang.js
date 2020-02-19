@@ -23,9 +23,9 @@ export default function(){
                     <Card>
                         <CardImg top width="100%" src={p1} alt="phan hoi khach hang" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>Phạm Quỳnh Như</CardTitle>
+                            <CardSubtitle>Hải Phòng</CardSubtitle>
+                            <CardText>" Mới lái xe nên tôi hầu như rất căng thẳng mỗi lần cầm volang, nhờ USB nhạc của Zcar mà tôi lái xe thư giãn và an toàn, cảm ơn các bạn ! "</CardText>
                         </CardBody>
                         </Card>
                     </Col>
@@ -33,9 +33,9 @@ export default function(){
                     <Card>
                         <CardImg top width="100%" src={p2} alt="phan hoi khach hang" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>Trịnh Tuấn</CardTitle>
+                            <CardSubtitle>Sài Gòn</CardSubtitle>
+                            <CardText>" Lái taxi nên hàng ngày chạy rất nhiều khách, cái USB này hay thật, lưu được rất nhiều bài hát bolero tôi thích,đi đường rất nghe rất ok "</CardText>
                         </CardBody>
                         </Card>
                     </Col>
@@ -43,9 +43,9 @@ export default function(){
                     <Card>
                         <CardImg top width="100%" src={p3} alt="phan hoi khach hang" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>Thanh Hương</CardTitle>
+                            <CardSubtitle>Hà Nội</CardSubtitle>
+                            <CardText>" Lái xe an toàn cần sự tập trung và tỉnh táo, tôi đã tìmđược điều đó khi sử dụng USB của Zcar. Sẽ giới thiệu cho bạn bè và người thân sử dụng nữa "</CardText>
                         </CardBody>
                         </Card>
                     </Col>
@@ -53,9 +53,9 @@ export default function(){
                     <Card>
                         <CardImg top width="100%" src={p4} alt="phan hoi khach hang" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>Mạnh Tuấn</CardTitle>
+                            <CardSubtitle>Hải Phòng</CardSubtitle>
+                            <CardText>" Lái xe an toàn cần sự tập trung và tỉnh táo, tôi đã tìmđược điều đó khi sử dụng USB của Zcar. Sẽ giới thiệu cho bạn bè và người thân sử dụng nữa "</CardText>
                         </CardBody>
                         </Card>
                     </Col>
