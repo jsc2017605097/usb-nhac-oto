@@ -60,13 +60,13 @@ export default class extends Component{
     async handleSubmit(event){
       event.preventDefault();
       let {name,phone,address,note,info,error} = this.state;
-      if(name == null){
+      if(name == null || name == ''){
         error.name = 'Tên không được để trống.';
       }
-      if(phone == null){
+      if(phone == null || phone == ''){
         error.phone = 'Số điện thoại không được để trống.';
       }
-      if(address == null){
+      if(address == null || address == ''){
         error.address = 'Địa chỉ không được để trống.';
       }
       this.setState({
@@ -148,10 +148,10 @@ export default class extends Component{
             <FormGroup>
               <Label for="info">Gói USB</Label>
               <Input onChange ={this.onChange} name="info" type="select"  id="info">
-                <option>Gói Usb nhạc theo yêu cầu.</option>
-                <option>Gói 1.500 bài hát(320kbs)</option>
-                <option>Gói 250 videos(Full HD)</option>
-                <option>Gói 1.500 bài hát + 250 videos</option>
+                <option value = 'Gói Usb nhạc theo yêu cầu.'>Gói Usb nhạc theo yêu cầu.</option>
+                <option value = 'Gói 1.500 bài hát(320kbs)'>Gói 1.500 bài hát(320kbs)</option>
+                <option value = 'Gói 250 videos(Full HD)'>Gói 250 videos(Full HD)</option>
+                <option value = 'Gói 1.500 bài hát + 250 videos'>Gói 1.500 bài hát + 250 videos</option>
               </Input>
            </FormGroup>
             <FormGroup>
