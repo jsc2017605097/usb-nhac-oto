@@ -19,7 +19,7 @@ hành 5 năm.
     
     <div className="col-xs-12 col-sm-6 col-md-3">
     <div className="widget no-box">
-    <h5 className="widget-title">Truy cập nhanh<span></span></h5>
+    <h5 className="widget-title">TRUY CẬP NHANH<span></span></h5>
     <ul className="thumbnail-widget">
     <li>
     <div className="thumb-content"><Link
@@ -79,7 +79,7 @@ hành 5 năm.
     <div className="col-xs-12 col-sm-6 col-md-3">
     
     <div className="widget no-box">
-    <h5 className="widget-title">Chấp Nhận Thanh Toán<span></span></h5>
+    <h5 className="widget-title">CHẤP NHẬN THANH TOÁN<span></span></h5>
       Tiền mặt<br />
       Internet banking<br />
       Nhận hàng, trả tiền (COD)

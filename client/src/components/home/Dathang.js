@@ -148,6 +148,7 @@ export default class extends Component{
             <FormGroup>
               <Label for="info">Gói USB</Label>
               <Input onChange ={this.onChange} name="info" type="select"  id="info">
+              <option value = 'Chưa chọn gói nào.'>Chọn Gói USB Nhạc Ở Đây.</option>
                 <option value = 'Gói Usb nhạc theo yêu cầu.'>Gói Usb nhạc theo yêu cầu.</option>
                 <option value = 'Gói 1.500 bài hát(320kbs)'>Gói 1.500 bài hát(320kbs)</option>
                 <option value = 'Gói 250 videos(Full HD)'>Gói 250 videos(Full HD)</option>
@@ -156,7 +157,7 @@ export default class extends Component{
            </FormGroup>
             <FormGroup>
                   <Label for="note">Ghi Chú</Label><br />
-                  <textarea name = 'note' id = 'note' value = {this.state.note}    rows = '5' style = {{width:'100%'}}> </textarea>
+                  <textarea onChange ={this.onChange} name = 'note' id = 'note' value = {this.state.note}    rows = '5' style = {{width:'100%'}}> </textarea>
             </FormGroup>
             <Button  color = 'primary' onMouseMove = {this.onChange}>Đặt Hàng</Button>
             </div>
