@@ -4,15 +4,15 @@ import {MdQuestionAnswer,MdSecurity} from 'react-icons/md';
 import {FaInfoCircle,FaDatabase} from 'react-icons/fa';
 import {IoMdContacts} from 'react-icons/io'
 import Fade from 'react-reveal';
-import {FormContext} from '../../context/Form';
 import {Link} from 'react-scroll';
+import Logo from './logo.PNG';
 export default function(){
     return(
         <div className = 'bar'>
-            <Fade right>
+            <Fade left>
             <ul>
                 
-                <li><a className = 'font-weight text-center' color = 'white'>USB FOR CARS</a></li>
+                <li className = 'text-center'><img src = {Logo} width='150px' alt = 'anh logo' /></li>
                 <li >
                 <Link
           activeClass="active"
