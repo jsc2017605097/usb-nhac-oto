@@ -66,7 +66,7 @@ export default function() {
         <li >
         <Link
           activeClass="active"
-          to="footer"
+          to="baohanh"
           spy={true}
           smooth={true}
           offset={-70}

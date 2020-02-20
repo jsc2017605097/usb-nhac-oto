@@ -21,21 +21,10 @@ export default function(){
                 
                 <Col  xs = '12' sm = '6' md = '6' lg = '6' xl = '6'>
                     <Fade right >
-                    <Card   style = {{border:'none',cursor:'pointer'}} className =' hvr-curl-top-left'>
+                    <Card  style = {{border:'none',cursor:'pointer'}} className ='hvr-wobble-to-bottom-right hvr-curl-top-left'>
                         <CardImg top width = '100%' src={Why1} alt="Card image cap" />
-                        <CardTitle>KHI KHÔNG SỬ DỤNG USB NHẠC</CardTitle>
-                        <CardText>
-                            - Lái xe đường dài mệt mỏi, buồn ngủ gây nguy hiểm.
-                            <br />
-                            - Hệ thống đầu đĩa CD, DVD cũ cồng kềnh, khó
-                            sử dụng.
-                            <br />
-                            - Chất lượng nhạc CD, trực tuyến không đảm bảo làm
-                            giảm trải nghiệm nghe nhạc trên xe.
-                            <br />
-                            - Hệ thống CD, DVD cũ khó cập nhật, thay thế bài hát,
-                            chương trình giải trí mới.
-                        </CardText>
+                        <CardTitle>Card title</CardTitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                     </Card>
                     </Fade >
                 </Col>
@@ -43,20 +32,10 @@ export default function(){
                
                 <Col xs = '12' sm = '6' md = '6' lg = '6' xl = '6'>
                      <Fade left >
-                    <Card style = {{border:'none',cursor:'pointer'}} className =' hvr-curl-top-left'>
+                    <Card style = {{border:'none',cursor:'pointer'}} className ='hvr-wobble-to-bottom-right hvr-curl-top-left'>
                         <CardImg top width = '100%' src={Why2} alt="Card image cap" />
-                        <CardTitle>KHI SỬ DỤNG USB NHẠC Zcarmedia</CardTitle>
-                        <CardText>
-                        - Tinh thần sảng khoái, tỉnh táo khi lái xe đảm bảo an toàn.
-                        <br />
-                        - USB nhạc đơn giản, nhỏ gọn, dễ sử dụng.
-                        <br />
-                        - Chất lượng nhạc USB đạt chuẩn STUDIO, nhạc MP3 từ 
-                        320kbps trở lên, Video từ Full HD trở lên.
-                        <br />
-                        - USB nhạc dễ dàng update nhạc, chương trình giải trí mới
-                        tùy lựa chọn của chủ xế.
-                        </CardText>
+                        <CardTitle>Card title</CardTitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
                     </Card>
                     </Fade>
                 </Col>

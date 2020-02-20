@@ -14,15 +14,10 @@ export default function(){
                 
                 <li><a className = 'font-weight text-center' color = 'white'>USB FOR CARS</a></li>
                 <li >
-                <Link
-    activeClass="active"
-    to="dathang"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration= {500}>
-                <a className="hvr-underline-from-center" href="#"><MdQuestionAnswer/>  Tư Vấn Mua Hàng</a>
-                </Link>
+                <FormContext.Consumer>
+                    {({onClick})=>(<li><a onClick = {onClick} className="hvr-underline-from-center" href="#"><MdQuestionAnswer/>  Tư Vấn Mua Hàng</a></li>
+                )}
+                </FormContext.Consumer>
                 </li>
                 <li >
                 <Link
@@ -60,18 +55,9 @@ export default function(){
           </Link>
         </li>
                 <li >
-                <Link
-          activeClass="active"
-          to="footer"
-          spy={true}
-          smooth={true} 
-          offset={-70}
-          duration= {1500}
-          >
                 <a className="hvr-underline-from-center" href="#baohanh"><MdSecurity/>  Chế Độ Bảo Hành </a>
-                </Link>
                 </li>
-       
+        
             </ul>
             </Fade>
         </div>

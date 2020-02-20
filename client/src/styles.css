@@ -86,21 +86,9 @@ body {
 .messenger{
   position: fixed;
   bottom: 120px;
-  left: 10px;
+  left: 0px;
 }
-.messenger img{
-  width: 60px;
-}
-@media only screen and (max-width: 667px) {
-  .messenger img{
-    width: 50px;
-  }
-  .messenger{
-    position: fixed;
-  bottom: 100px;
-    left: 0px;
-  }
-}
+
 /*==================== 
 	Footer 
 ====================== */
@@ -165,6 +153,3 @@ ul.social-footer2 {	margin: 0;padding: 0;	width: auto;}
 ul.social-footer2 li {display: inline-block;padding: 0;}
 ul.social-footer2 li a:hover {background-color:#ff8d1e;}
 ul.social-footer2 li a {display: block;	height:30px;width: 30px;text-align: center;}
-#footer li a{
-  color: #fff !important;
-}
