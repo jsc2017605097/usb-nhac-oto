@@ -84,7 +84,7 @@ export default class extends Component{
       {
         return;
       }
-      const form = await axios.get('/api',{
+      const form = await axios.post('/api',{
         name,
         address,
         phone,
@@ -110,7 +110,7 @@ export default class extends Component{
         <div className = 'dathang' id = 'dathang'>
             <Countdown timeTillDate="2 27 2020, 6:00 am" timeFormat="MM DD YYYY, h:mm a" />
             <div className = 'text-center'  style = {{color:'#fff'}}><GiStarShuriken /><GiStarShuriken /><GiStarShuriken /></div>
-            <div style = {{margin:'20px 0px 30px 0'}} className = 'title'>NHANH TAY ĐẶT HÀNG NÀO</div>
+            <div style = {{margin:'20px 0px 30px 0'}} className = 'title'>ĐẶT HÀNG NGAY HÔM NAY !</div>
             {this.state.dangkithanhcong && <div className = 'thanhcong'>
             <Alert color="success" className = 'text-center'>
         Chúc mừng, bạn đã đặt hàng thành công!<br />

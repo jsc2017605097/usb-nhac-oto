@@ -10,9 +10,14 @@
 .card-title{
     color: red;
     font-family:'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 .card-text{
     font-style: italic;
+    font-size:16px ;
+    font-weight: normal;
 }
 .card-subtitle{
     border-bottom: 1px solid red;

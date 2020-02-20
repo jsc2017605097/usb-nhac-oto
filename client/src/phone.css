@@ -2,7 +2,20 @@
     position: fixed;
     bottom:-50px;
     left: -60px;
+    z-index:3 !important;
 }
+.sodt{
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    background-color: #f20049;  
+    color: aliceblue;
+    padding: 17px 20px 17px 100px;
+    border-radius:30px;
+    z-index: -1;
+    font-size: 20px;
+}
+
 .coccoc-alo-ph-circle {
     width: 160px;
     height: 160px;

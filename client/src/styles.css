@@ -88,7 +88,14 @@ body {
   bottom: 120px;
   left: 0px;
 }
-
+@media only screen and ( max-width: 667px){
+  .messenger img{
+    width: 60px;
+  }
+  .messenger{
+    left: 10px;
+  }
+}
 /*==================== 
 	Footer 
 ====================== */
@@ -96,7 +103,9 @@ body {
 /* Main Footer */
 footer .main-footer{	padding: 20px 0;	background: #252525;}
 footer ul{	padding-left: 0;	list-style: none;}
-
+#footer a{
+  color: #fff !important;
+}
 /* Copy Right Footer */
 .footer-copyright {	background: #222;	padding: 5px 0;}
 .footer-copyright .logo {    display: inherit;}

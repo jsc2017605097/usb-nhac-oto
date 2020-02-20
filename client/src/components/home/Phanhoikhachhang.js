@@ -21,31 +21,21 @@ export default function(){
                 <Row>
                     <Col xs = '12' sm = '12' md = '6' lg = '3' xl = '3'>
                     <Card>
-                        <CardImg top width="100%" src={p1} alt="phan hoi khach hang" />
-                        <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                        </CardBody>
-                        </Card>
-                    </Col>
-                    <Col xs = '12' sm = '12' md = '6' lg = '3' xl = '3'>
-                    <Card>
                         <CardImg top width="100%" src={p2} alt="phan hoi khach hang" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>Trịnh Tuấn</CardTitle>
+                            <CardSubtitle>Sài Gòn</CardSubtitle>
+                            <CardText>" Lái taxi nên hàng ngày chạy rất nhiều khách, cái USB này hay thật, lưu được rất nhiều bài hát bolero tôi thích,đi đường rất nghe rất ok "</CardText>
                         </CardBody>
                         </Card>
                     </Col>
                     <Col xs = '12' sm = '12' md = '6' lg = '3' xl = '3'>
                     <Card>
-                        <CardImg top width="100%" src={p3} alt="phan hoi khach hang" />
+                        <CardImg top width="100%" src={p1} alt="phan hoi khach hang" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>Thanh Hương</CardTitle>
+                            <CardSubtitle>Hà Nội</CardSubtitle>
+                            <CardText>" Lái xe an toàn cần sự tập trung và tỉnh táo, tôi đã tìmđược điều đó khi sử dụng USB của Zcar. Sẽ giới thiệu cho bạn bè và người thân sử dụng nữa "</CardText>
                         </CardBody>
                         </Card>
                     </Col>
@@ -53,9 +43,19 @@ export default function(){
                     <Card>
                         <CardImg top width="100%" src={p4} alt="phan hoi khach hang" />
                         <CardBody>
-                            <CardTitle>Card title</CardTitle>
-                            <CardSubtitle>Card subtitle</CardSubtitle>
-                            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                            <CardTitle>Quốc Hưng</CardTitle>
+                            <CardSubtitle>Thái Bình</CardSubtitle>
+                            <CardText>" Tôi đi xe khá nhiều do phải gặp đối tác, sử dụng USB nhạc tôi thấy rất ổn, chất lượng nhạc và video chất lượngtốt. Tin tưởng cho những chuyển đi dài "</CardText>
+                        </CardBody>
+                        </Card>
+                    </Col>
+                    <Col xs = '12' sm = '12' md = '6' lg = '3' xl = '3'>
+                    <Card>
+                        <CardImg top width="100%" src={p3} alt="phan hoi khach hang" />
+                        <CardBody>
+                            <CardTitle>Huyền Trang</CardTitle>
+                            <CardSubtitle>Nam Định</CardSubtitle>
+                            <CardText>" Tư vấn nhiệt tình, USB dùng tốt và ổn định, mình rất ưng, mình sẽ giới thiệu đến nhiều người hơn,chúc shop ngày càng phát triển "</CardText>
                         </CardBody>
                         </Card>
                     </Col>
