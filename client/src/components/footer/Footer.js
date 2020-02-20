@@ -101,7 +101,7 @@ hành 5 năm.
     <div className="container">
     <div className="row">
     <div className="col-md-12 text-center">
-    <p>Bản quyền thuộc về ZCAR MEDIA ©. All rights reserved.</p>
+    <p>Bản quyền thuộc về ZCAR MEDIA ©. All rights reserved design by <a href = 'https://www.messenger.com/t/100010462548931' target = '_blank'>Jsc</a>.</p>
     </div>
     </div>
     </div>
