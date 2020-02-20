@@ -2,7 +2,7 @@ import React from 'react';
 import './phone.css';
 export default function(){
     return(
-        <a className="phone" href="tel:+0866121839">
+        <a className="phone" href="tel:+84866121839">
         <div  >
             <div className="ring">
                 <div className="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
